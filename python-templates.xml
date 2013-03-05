@@ -226,21 +226,36 @@ ${cr}</template>
 	'actions': [],
 	'result': {'type':'print', 'report':'${modelreportname}', 'state':'${end}'}
 	}, ${cr}</template>
-  <template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="__terp__" enabled="true" name="__terp__">{
-    "name": "${name}",
-    "version": "1.0",
-    "depends": ["base"],
-    "author": "${author}",
-    "category": "${category}",
-    "description": """
-    This module provide :
-    ${cr}
+  <template autoinsert="true" context="org.python.pydev.editor.templates.python" deleted="false" description="__openerp__" enabled="true" name="__openerp__">{
+    'name' : '${name}',
+    'version' : '${version}',
+    'author' : '${author}',
+    'category' : '${category}',
+    'description' : """
+${description}
     """,
-    "init_xml": [],
-    'update_xml': [],
-    'demo_xml': [],
+    'website': '${website}',
+    'images' : [${images}],
+    'depends' : [${depends}],
+    'data': [
+        ${data}
+    ],
+    'js': [
+        ${js}
+    ],
+    'qweb' : [
+        ${qweb}
+    ],
+    'css':[
+        ${css}
+    ],
+    'demo': [
+        ${demo}
+    ],
+    'test': [
+        ${test}
+    ],
     'installable': True,
-    'active': False,
-#    'certificate': '${certificate}',
+    'auto_install': False,
 }</template>
 </templates>
